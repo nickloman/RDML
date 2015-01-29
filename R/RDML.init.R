@@ -659,19 +659,19 @@ RDML$set("public", "initialize", function(input) {
   
   private$.recalcPositions()  
   
-  if(length(private$.id) != 0 &&
-    private$.id[[1]]$publisher == "Roche Diagnostics"
-     && !is.na(dilutions.r)) {
-    cat("Adding Roche standards")
-    for(conc.i in 1:length(dilutions.r[[1]])) {
-      sample.id <- private$.experiment[[1]]$run[[1]]$react[[
-        which(names(private$.experiment[[1]]$run[[1]]$react) == 
-                names(dilutions.r[[1]])[conc.i])]]$sample      
-      private$.sample[[sample.id]]$quantity <- list(
-        value = unname(dilutions.r[[1]][conc.i]),
-        unit = "other"
-      )
-    }
-  }  
+#  if(length(private$.id) != 0 &&
+#    private$.id[[1]]$publisher == "Roche Diagnostics"
+#     && !is.na(dilutions.r)) {
+#    cat("Adding Roche standards")
+#    for(conc.i in 1:length(dilutions.r[[1]])) {
+#      sample.id <- private$.experiment[[1]]$run[[1]]$react[[
+#        which(names(private$.experiment[[1]]$run[[1]]$react) == 
+#                names(dilutions.r[[1]])[conc.i])]]$sample      
+#      private$.sample[[sample.id]]$quantity <- list(
+#        value = unname(dilutions.r[[1]][conc.i]),
+#        unit = "other"
+#      )
+#    }
+#  }  
 }, 
 overwrite = TRUE)
