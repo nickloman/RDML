@@ -11,7 +11,7 @@
 \item{input}{\code{data.frame} -- \code{data.frame} with colnames as samples
 names and first column -- cycle number or temperature (see 'Details')}
 
-\item{input}{\code{list} -- \list{list} with table called 'qPCR' for qPCR
+\item{input}{\code{list} -- \code{list} with table called 'qPCR' for qPCR
 data and/or table called 'melt' for melting data and \code{data.frame}
 'map' with description of samples (see 'Details')}
 
